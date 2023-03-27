@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WorkWithGeneric
 {
-	internal class VolumeInterface
+	public interface IVolumable
 	{
+		double Volume();
 	}
 }
