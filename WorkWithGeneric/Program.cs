@@ -17,12 +17,15 @@ namespace WorkWithGeneric
             List<Parallelepiped> P = new List<Parallelepiped>();
             for (int i = 0; i < arr.Length; ++i)
                 if (arr[i] is Parallelepiped) P.Add(arr[i] as Parallelepiped);
-            Console.WriteLine($" Pum = {Algorithms.TotalVolume(P.ToArray())}");
+            Console.WriteLine($" Pum = {Algorithms.TotalVolume(P)}");
 
             List<Cylinder> C = new List<Cylinder>();
             for (int i = 0; i < arr.Length; ++i)
                 if (arr[i] is Cylinder) C.Add(arr[i] as Cylinder);
             Console.WriteLine($" Cum = {Algorithms.TotalVolume(C.ToArray())}");
+
+            //int[] A = { 1, 2, 3, 4 };
+            //double I = Algorithms.TotalVolume(A);
 
         }
     }

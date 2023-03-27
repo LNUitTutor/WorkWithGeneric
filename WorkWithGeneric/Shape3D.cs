@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorkWithGeneric
 {
-    public abstract class Shape3D
+    public abstract class Shape3D : IVolumable
     {
         public abstract double Volume();
         public abstract double BaseArea();

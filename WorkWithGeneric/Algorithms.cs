@@ -8,10 +8,10 @@ namespace WorkWithGeneric
 {
     public static class Algorithms
     {
-        public static double TotalVolume<T>(T[] objects)
+        public static double TotalVolume<T>(IEnumerable<T> objects) where T : IVolumable
         {
             double Sum = 0.0;
-            for (int i = 0; i < objects.Length; ++i) Sum += (objects[i] as Shape3D).Volume();
+            foreach(T obj in objects) Sum += obj.Volume();
             return Sum;
         }
     }
