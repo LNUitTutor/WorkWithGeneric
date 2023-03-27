@@ -31,8 +31,24 @@ namespace WorkWithGeneric
             return $"Cylinder(radius = {r}, height = {h})";
         }
     }
-    //public class Parallelepiped : Shape3D
-    //{
-
-    //}
+    public class Parallelepiped : Shape3D
+    {
+        double a, b, c;
+        public Parallelepiped(double x = 1.0, double y = 1.0, double z = 1.0)
+        {
+            a = x; b = y; c = z;
+        }
+        public override double BaseArea()
+        {
+            return a * b;
+        }
+        public override double Volume()
+        {
+            return a * b * c;
+        }
+        public override string ToString()
+        {
+            return $"Parallelepiped [{a} x {b} x {c}]";
+        }
+    }
 }
