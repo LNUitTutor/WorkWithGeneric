@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WorkWithGeneric
 {
@@ -14,5 +11,20 @@ namespace WorkWithGeneric
             foreach(T obj in objects) Sum += obj.Volume();
             return Sum;
         }
+        public static void PrintAll<T>(IEnumerable<T> col)
+        {
+            foreach (T inst in col) Console.WriteLine(inst);
+        }
+        public static void DoWithEachl<T>(IEnumerable<T> col, Action<T> action)
+        {
+            foreach (T inst in col) action(inst);
+        }
+        public static TOut Accumulate<TIn, TOut>(IEnumerable<TIn> col, Func<TIn, TOut, TOut> func)
+        {
+            TOut res = default;
+            foreach (TIn c in col) res = func(c, res);
+            return res;
+        }
+
     }
 }

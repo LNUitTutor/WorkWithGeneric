@@ -24,8 +24,14 @@ namespace WorkWithGeneric
                 if (arr[i] is Cylinder) C.Add(arr[i] as Cylinder);
             Console.WriteLine($" Cum = {Algorithms.TotalVolume(C.ToArray())}");
 
-            //int[] A = { 1, 2, 3, 4 };
-            //double I = Algorithms.TotalVolume(A);
+            FlashMemory[] F = { new FlashMemory(), new FlashMemory("Kingston", 64), new FlashMemory("Toshiba", 128) };
+            Console.WriteLine($"\n Mem = {Algorithms.TotalVolume(F)} Gb\n");
+
+            Algorithms.PrintAll(arr); Console.WriteLine();
+            Algorithms.PrintAll(F); Console.WriteLine();
+
+            Algorithms.DoWithEachl(F, f => Console.WriteLine(f));
+            Console.WriteLine($"\n Mem = {Algorithms.Accumulate(F, (IVolumable f, double r) => r += f.Volume())} Gb\n");
 
         }
     }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WorkWithGeneric
+﻿namespace WorkWithGeneric
 {
-	public interface IVolumable
+    public interface IVolumable
 	{
 		double Volume();
 	}
