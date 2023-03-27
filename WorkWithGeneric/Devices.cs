@@ -40,7 +40,7 @@
         }
         public override string ToString()
         {
-            return $"HDD>>>{segment},{capacity}Gb,{performance}bpms";
+            return $"HDD>>>{segment},{capacity}Gb,{performance}Kbpms";
         }
         public bool Formatted
         {
