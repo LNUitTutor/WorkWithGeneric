@@ -6,31 +6,25 @@ using System.Threading.Tasks;
 
 namespace WorkWithGeneric
 {
-	class Banyak : ShapeWithVolume
+	class Banyak
 	{
-		private double r;
-		private double height;
-		public Banyak() 
+		private double vol;
+		private string color;
+		private string material;
+		public double Vol
 		{
-			r = 0;
-			height = 0;
-			this.vol = this.Volume();
-			allInstances.Add(this);
+			get => vol;
 		}
-		public Banyak(double _r, double _height)
+		public Banyak(string _color, string _material, double _vol)
 		{
-			this.r = _r;
-			this.height = _height;
-			this.vol = this.Volume();
-			allInstances.Add(this);
+			this.vol = _vol;
+			this.color = _color;
+			this.material= _material; 
 		}
-		public override double Volume()
-		{
-			return Math.PI * this.r * this.r * this.height;
-		}
+		public Banyak():this("срiбний", "алюмінiй", 0.0) { }
 		public override string ToString()
 		{
-			return $"Я баняк. Я можу вмістити в себе {this.Volume()} мл зупи :)";
+			return $"Баняк. Матеріал: {material}.Колір: {color}.Об'єм {vol} мл";
 		}
 	}
 }
