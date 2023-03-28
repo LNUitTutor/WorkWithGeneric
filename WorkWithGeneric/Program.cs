@@ -7,9 +7,9 @@ namespace WorkWithGeneric
     {
         static void Main(string[] args)
         {
-            //ShapePart(); Console.ReadLine();
-            //DevicePart(); Console.ReadLine();
-            //PondPart(); Console.ReadLine();
+            ShapePart(); Console.ReadLine();
+            DevicePart(); Console.ReadLine();
+            PondPart(); Console.ReadLine();
             ArrayPart(); Console.ReadLine();
         }
 
