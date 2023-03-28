@@ -7,9 +7,30 @@ namespace WorkWithGeneric
     {
         static void Main(string[] args)
         {
-            ShapePart(); Console.ReadLine();
-            DevicePart(); Console.ReadLine();
-            PondPart(); Console.ReadLine();
+            //ShapePart(); Console.ReadLine();
+            //DevicePart(); Console.ReadLine();
+            //PondPart(); Console.ReadLine();
+            ArrayPart(); Console.ReadLine();
+        }
+
+        private static void ArrayPart()
+        {
+            Console.WriteLine("*** ArrayPart ------------------------------------\n");
+            int[] a = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 };
+
+            Array.ForEach(a, i => Console.WriteLine($"{i} --> {Math.Log2(i)}"));
+
+            var b = Array.ConvertAll(a, i => Math.Log2(i));
+            Console.WriteLine($"\nThe result has type {b.GetType().Name}");
+            Array.ForEach(b, x => Console.Write($" {x} "));
+            Console.WriteLine();
+
+            Console.WriteLine($"\n All are positive: {Array.TrueForAll(a, i => i > 0)}");
+            Console.WriteLine($" All are less then 500: {Array.TrueForAll(a, i => i < 500)}");
+
+            Console.WriteLine($"\nPosition of 256 is {Array.BinarySearch(a, 256)}");
+            Console.WriteLine($"\nPosition of 300 is {Array.BinarySearch(a, 300)}");
+            Console.WriteLine($"\nPosition of 5 is {Array.BinarySearch(a, 5)}");
         }
 
         private static void DevicePart()
