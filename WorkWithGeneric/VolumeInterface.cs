@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WorkWithGeneric
+﻿namespace WorkWithGeneric
 {
+<<<<<<< HEAD
 	internal class VolumeInterface
+=======
+    public interface IVolumable
+>>>>>>> f2d0fe5ece25fddb1eb9304b83e70335eda05d22
 	{
 	}
 }
