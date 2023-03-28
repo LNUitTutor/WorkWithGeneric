@@ -15,11 +15,13 @@ namespace WorkWithGeneric
         // Interface realization
         public double Volume() { return volume; }
         // Constructor
-        public Lake(string n = "", double vol = 1, double ar = 1)
+
+        public Lake(string n, double vol, double ar)
         {
             volume = vol; area = ar; name = n;
         }
-       
+
+        public Lake() : this(string.Empty, 1, 1) { }
        
         // ToString()
         public override string ToString()
