@@ -68,7 +68,7 @@ namespace WorkWithGeneric
 
             Algorithms.PrintAll(F); Console.WriteLine();
 
-            Algorithms.DoWithEachl(F, f => f.AverageDepth *= 0.9);
+            Algorithms.DoWithEachl(F, f => { f.AverageDepth *= 0.9; });
             Algorithms.PrintAll(F); Console.WriteLine();
 
             Console.WriteLine($" Water Volume = {Algorithms.TotalVolume(F)} cubic meters\n");
