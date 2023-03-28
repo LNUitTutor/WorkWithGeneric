@@ -33,6 +33,11 @@ namespace WorkWithGeneric
             devices.AddRange(F); devices.AddRange(HDD);
             Console.WriteLine(" Total memory of all devises = {0} Gb\n",
                 Algorithms.Accumulate<IVolumable, double>(devices, (f,  r) => r += f.Volume()));
+
+            Console.WriteLine(" Largest memory of all devises = {0} Gb\n",
+                Algorithms.Accumulate(F, (IVolumable f, double r) => r = f.Volume()>r?f.Volume():r));
+            Console.WriteLine(" Largest device of all devises = {0} Gb\n",
+                Algorithms.Accumulate(F, (FlashMemory f, FlashMemory r) => r = f.Volume() > r.Volume() ? f : r));
         }
 
         private static void ShapePart()

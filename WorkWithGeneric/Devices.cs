@@ -4,10 +4,11 @@
     {
         string producer;
         int capacity;
-        public FlashMemory(string prod = "Kingston", int cap = 16)
+        public FlashMemory(string prod, int cap)
         {
             producer = prod; capacity = cap;
         }
+        public FlashMemory() : this("Kingston", 16) { }
         public string Producer
         {
             get => producer;
