@@ -1,7 +1,6 @@
 ﻿namespace WorkWithGeneric
 {
-    public interface IVolumable
+	public interface IVolumable
 	{
-		double Volume();
 	}
 }
