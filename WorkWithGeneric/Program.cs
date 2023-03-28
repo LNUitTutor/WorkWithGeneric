@@ -64,10 +64,14 @@ namespace WorkWithGeneric
             Console.WriteLine("*** PondPart ------------------------------------\n");
             Pond[] F = { new Pond("Dnipro Reservoir", 8, 129000, 7000), new Pond("Busk Lyman", 5.2, 82000, 11000), new Pond("Desna", 3, 100300, 150) };
             Console.WriteLine($" Water Volume = {Algorithms.TotalVolume(F)} cubic meters\n");
+            Console.WriteLine($"\n Water Volume = {Algorithms.Accumulate(F, (IVolumable f, double r) => r += f.Volume())} cubic meters\n");
 
             Algorithms.PrintAll(F); Console.WriteLine();
 
-            Algorithms.DoWithEachl(F, f => Console.WriteLine(f));
+            Algorithms.DoWithEachl(F, f => f.AverageDepth *= 0.9);
+            Algorithms.PrintAll(F); Console.WriteLine();
+
+            Console.WriteLine($" Water Volume = {Algorithms.TotalVolume(F)} cubic meters\n");
             Console.WriteLine($"\n Water Volume = {Algorithms.Accumulate(F, (IVolumable f, double r) => r += f.Volume())} cubic meters\n");
         }
     }
