@@ -7,10 +7,6 @@ namespace WorkWithGeneric
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            Console.WriteLine("Hello World!");
-
-=======
             ShapePart(); Console.ReadLine();
             DevicePart(); Console.ReadLine();
             PondPart(); Console.ReadLine();
@@ -82,7 +78,6 @@ namespace WorkWithGeneric
 
             Console.WriteLine($" Water Volume = {Algorithms.TotalVolume(F)} cubic meters\n");
             Console.WriteLine($"\n Water Volume = {Algorithms.Accumulate(F, (IVolumable f, double r) => r += f.Volume())} cubic meters\n");
->>>>>>> f2d0fe5ece25fddb1eb9304b83e70335eda05d22
         }
 	}
 }
